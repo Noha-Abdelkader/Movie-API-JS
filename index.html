@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JS EXAM</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="home" class="bg-dark">
+    <!-- ================= Start SideBar ======================== -->
+    <section id="sideBar" class="100-vh bg-light position-fixed top-0 bottom-0 d-flex ">
+     
+      <div id="extraSideBar" class="d-flex flex-column justify-content-between">
+        <ul class="list-unstyled text-center mb-3 ">
+          <li class="mb-3 list1"><a class="sideList sideListCall text-decoration-none" name='movie/now_playing?api_key=99f8d07aa52bb74ca027bcd82345cf6b&language=en-US&page=1'>Now playing</a></li>
+          <li class="mb-3 list2"><a class="sideList sideListCall text-decoration-none" name="movie/popular?api_key=99f8d07aa52bb74ca027bcd82345cf6b&language=en-US&page=1">Popular</a></li>
+          <li class="mb-3 list3"><a class="sideList sideListCall text-decoration-none" name="movie/top_rated?api_key=99f8d07aa52bb74ca027bcd82345cf6b&language=en-US&page=1">Top Rated</a></li>
+          <li class="mb-3 list4"><a class="sideList sideListCall text-decoration-none" name="trending/all/day?api_key=99f8d07aa52bb74ca027bcd82345cf6b">Trending</a></li>
+          <li class="mb-3 list5"><a class="sideList sideListCall text-decoration-none" name='movie/upcoming?api_key=99f8d07aa52bb74ca027bcd82345cf6b&language=en-US&page=1'>Upcoming</a></li>
+          <li class="mb-3 list6" id="contactList"><a class=" sideList text-decoration-none" >Contact Us</a></li>
+        </ul>
+        
+        <div>
+        <ul  class="list-unstyled d-flex justify-content-center mb-1" >
+          <li class="p-3"><i class="icon fa-brands fa-facebook-f  fs-6"></i></li>
+          <li class="p-3"><i class="icon fa-brands fa-twitter  fs-6"></i></li>
+          <li class="p-3"><i class="icon fa-solid fa-globe  fs-6"></i></li>
+        </ul>
+        <p class="mb-3 rightTxt  ">Copyright Â© 2019 All Rights Reserved.</p>
+      </div>
+      </div>
+     
+      <div class=" d-flex flex-column justify-content-between align-items-center p-1">
+          <div class=" d-flex justify-content-center align-items-center">
+            <img src="images/logo.png" class=" w-50 py-3 " alt="logo">
+          </div>
+
+            <div class="iconNavBar d-flex justify-content-center align-items-center p-1">
+              <i id="sideIcon" class="fa fa-align-justify fa-xl p-1"></i>
+              <i id="iconXmark" class="fa-solid fa-xmark fa-xl p-1"></i>
+            </div>
+
+            <div class="  d-flex flex-column justify-content-center align-items-center mb-3">
+
+              <div class="iconNavBar2 mb-2 d-flex justify-content-center align-items-center">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div  class=" iconNavBar2 d-flex justify-content-center align-items-center">
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+
+          </div>
+    </section>
+    <!-- ================= END SideBar ======================== -->
+
+
+    <!-- ====== START HOME Section ================================== -->
+    <section id="mainBody" class="py-5 container w-75">
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <input class="w-100 bg-transparent text-primary  p-2 text-center" type="text" id="searchByWord"
+            name="inputMovie" placeholder="get movies by word...">
+        </div>
+
+        <div class="col-md-6">
+          <input class="w-100 bg-transparent text-primary  p-2 text-center" type="text" id="searchByLetter"
+            name="inputSearch" placeholder="search...">
+        </div>
+      </div>
+
+      <div id="movieData" class="row  gy-4"></div>
+    </section>
+    <!-- ====== END HOME Section ================================== -->
+
+    <!-- ============ START  Contact Section ====================================================================== -->
+    <section id="contact" class="container w-75 py-5">
+      <h2 class="text-white mb-4 fw-light">ContactUs...</h2>
+      <div class="row  text-primary mb-4">
+        <div class="col-md-6  p-md-4">
+          <input id="inputName" type="text" class="p-2 bg-transparent text-center  text-primary mb-3 d-block w-100"
+            placeholder="Enter your name">
+          <p id="nameMsg">Your Name is not valid</p>
+          <input id="inputMail" type="email" class="p-2 bg-transparent  text-center text-primary mb-3  d-block w-100"
+            placeholder="Enter Email">
+          <p id="mailMsg">enter vaild mail , name@example.com</p>
+          <input id="inputPhone" type="number" name=""
+            class="p-2 text-center bg-transparent  text-primary mb-3 d-block w-100" placeholder="Enter phone">
+          <p id="phoneMsg">entre valid phone</p>
+        </div>
+        <div class="col-md-6 p-md-4">
+          <input id="inputAge" type="number" name=""
+            class="p-2 bg-transparent text-center  text-primary mb-3  d-block w-100 " placeholder="Enter Age">
+          <p id="ageMsg">entre valid Age</p>
+
+          <input id="inputPass" type="password" name=""
+            class="p-2 bg-transparent text-center  text-primary mb-3  d-block w-100" placeholder="Enter password">
+          <p id="passMsg">entre valid password *Minimum eight characters, at least one letter and one number:*</p>
+          
+          <input id="inputRepass" type="password" name="" class="p-2 bg-transparent  text-center text-primary mb-3  d-block w-100" placeholder="Enter Repassword">
+          <p id="repassMsg">entre valid Repassword</p>
+        </div>
+      </div>
+      <button id='submitBtn' type="submit"
+        class="btn bg-transparent p-2 rounded-2 text-danger border-danger mb-2">Submit</button>
+        <p id="warningMsg" class="text-warning alert">Please fill all required data</p>
+    </section>
+    <!-- ======= END contact Section ===================================================== -->
+    
+    
+    <!-- ==== upBtn ========================= -->
+    <div id="upBtn"><i class="fa-solid fa-angles-up"></i></div>
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js" type="module"></script>
+</body>
+
+</html>
