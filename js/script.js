@@ -31,7 +31,7 @@ function showMovies(finalResult) {
   if(finalResult){
     for (let i = 0; i < finalResult.length; i++) {
       temp += `
-      <div class="col-md-6 col-lg-4 text-center rounded-3 p-2">
+      <div class="col-sm-3 col-md-4 col-lg-3 text-center rounded-3 p-2">
       <div class="poster">
          <div>
            <img src='https://image.tmdb.org/t/p/w500${finalResult[i].poster_path}' class='w-100' id="poster_path" alt=""> 
